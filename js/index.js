@@ -61,3 +61,26 @@ for(let i = 0; i < images.length; i++){
 //     console.log('mouse over')
 // })
 
+let aTags = document.querySelectorAll('a');
+for(let i = 0; i < aTags.length; i++){
+    aTags[i].addEventListener('mouseover', function(event){
+        event.target.style.backgroundColor = 'pink';
+        event.preventDefault();
+        event.stopPropagation();
+    })
+}
+for(let i = 0; i < aTags.length; i++){
+    aTags[i].addEventListener('mouseout', function(event){
+        event.target.style.backgroundColor = 'white';
+        event.preventDefault();
+    })
+}
+
+let nav = document.querySelector(".nav-container");
+nav.addEventListener('mouseover', function(event){
+    nav.style.backgroundColor = 'red';
+})
+nav.addEventListener('mouseout', function(event){
+    nav.style.backgroundColor = 'white';
+})
+
