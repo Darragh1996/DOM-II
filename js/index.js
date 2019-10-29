@@ -52,5 +52,12 @@ for(let i = 0; i < images.length; i++){
     images[i].addEventListener('dblclick', function(event){
         event.target.setAttribute('src', '/img/juan-encalada-6mcVaoGNz1w-unsplash.jpg');
     });
-}
+};
+
+//select
+// let footer = document.querySelector('.footer');
+// footer.addEventListener('mouseover', function(event){
+//     footer.textContent("Copyright Forever")
+//     console.log('mouse over')
+// })
 
