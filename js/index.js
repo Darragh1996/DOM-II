@@ -50,6 +50,7 @@ text.addEventListener('drop', function(event){
 images = document.querySelectorAll('img');
 for(let i = 0; i < images.length; i++){
     images[i].addEventListener('dblclick', function(event){
+        TweenMax.to(images[i], 3, {rotation:360})
         event.target.setAttribute('src', '/img/juan-encalada-6mcVaoGNz1w-unsplash.jpg');
     });
 };
@@ -58,7 +59,7 @@ for(let i = 0; i < images.length; i++){
 let footer = document.querySelector('.footer p');
 footer.addEventListener('contextmenu', function(event){
     event.preventDefault();
-    let message = prompt('Enter New Text:');
+    let message = prompt('Enter New Footer Text:');
     footer.textContent = message;
 })
 
