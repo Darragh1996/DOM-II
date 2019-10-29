@@ -54,13 +54,15 @@ for(let i = 0; i < images.length; i++){
     });
 };
 
-//select
-// let footer = document.querySelector('.footer');
-// footer.addEventListener('mouseover', function(event){
-//     footer.textContent("Copyright Forever")
-//     console.log('mouse over')
-// })
+//contextmenu
+let footer = document.querySelector('.footer p');
+footer.addEventListener('contextmenu', function(event){
+    event.preventDefault();
+    let message = prompt('Enter New Text:');
+    footer.textContent = message;
+})
 
+//preventing propagation
 let aTags = document.querySelectorAll('a');
 for(let i = 0; i < aTags.length; i++){
     aTags[i].addEventListener('mouseover', function(event){
